@@ -178,7 +178,7 @@ export default {
     // 上传视频成功调用的方法
     handleVodUploadSuccess(response, file, fileList) {
       // 上传视频id赋值
-      this.video.videoSourceId = response.data.videoId
+      this.video.videoSourceId = response.data.VideoId
       // 上传视频名称赋值
       this.video.videoOriginalName = file.name
     },
