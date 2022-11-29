@@ -145,6 +145,37 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    // 幻灯片管理
+    path: '/banner',
+    component: Layout,
+    // redirect：重定向地址
+    redirect: '/banner/list',
+    name: '幻灯片列表',
+    // title:显示标签 ， icon：显示图标
+    meta: { title: '幻灯片管理', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: '幻灯片列表',
+        component: () => import('@/views/edu/banner/list.vue'),
+        meta: { title: '幻灯片列表', icon: 'table' }
+      },
+      {
+        path: 'save',
+        name: '添加跑马灯',
+        component: () => import('@/views/edu/banner/save.vue'),
+        meta: { title: '添加幻灯片', icon: 'tree' }
+      },
+      {
+        path: 'edit/:id',
+        name: '幻灯片编辑',
+        component: () => import('@/views/edu/banner/save.vue'),
+        meta: { title: '幻灯片编辑', noCache: true },
+        hidden: true
+      }
+    ]
+  },
 
   {
     path: '/example',
