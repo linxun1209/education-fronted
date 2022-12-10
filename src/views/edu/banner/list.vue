@@ -120,11 +120,13 @@ export default {
         .getBannerListPage(this.page, this.limit, this.bannerQuery)
         .then((resp) => {
           // resp接口返回的数据
-          // console.log(resp);
+          // console.log('resp',resp);
           this.list = resp.data.rows
-          console.log(this.list)
+          console.log('resp.data.rows:', resp.data.rows)
+          console.log('this.list:', this.list)
           this.total = resp.data.total
-          console.log(this.total)
+          console.log('resp.data.total', resp.data.total)
+          console.log('this.total:', this.total)
         }) // 请求成功
         .catch((err) => {
           console.log(err)
